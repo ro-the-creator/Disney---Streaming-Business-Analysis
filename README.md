@@ -1,6 +1,6 @@
 # M0 Business Data Analysis Final Project
 
-### Industry
+## Industry
 Finance?? Probably
 
 ## Company
