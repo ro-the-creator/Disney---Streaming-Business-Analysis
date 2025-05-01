@@ -1,12 +1,16 @@
 # M0 Business Data Analysis Final Project
 
-## Industry
+## Business Understanding
+ 
+### Industry
 Finance?? Probably
 
-## Company
+### Company
 - Qickbooks
 - KPMG
 - Equifax
+
+## Project Objectives
 
 ### Business Understanding:
 Describe the business scenario and problem.
