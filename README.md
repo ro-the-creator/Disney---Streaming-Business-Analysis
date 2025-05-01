@@ -12,8 +12,6 @@ Finance?? Probably
 
 ## Project Objectives
 
-### Business Understanding:
-Describe the business scenario and problem.
 ### Data Lifecycle:
 Include an image of the data lifecycle and explain how each stage could potentially apply to your business scenario.
 ### Excel Analysis:
