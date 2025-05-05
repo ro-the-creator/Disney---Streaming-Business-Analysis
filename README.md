@@ -3,12 +3,10 @@
 ## Business Understanding
  
 ### Industry
-Finance?? Probably
+Marketing/Entertainment
 
 ### Company
-- Qickbooks
-- KPMG
-- Equifax
+Disney+, Netflix, Hulu, Prime Video
 
 ## Project Objectives
 
