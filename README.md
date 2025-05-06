@@ -3,6 +3,8 @@
  Streaming platforms rose to the top with their business model, attracting millions of concurrent subscribers. Netflix has been a dominating force in this sector of entertainment. However, many competing streaming platforms emerged, attempted to carve a space in this profitable sector. Disney+ is one of these competing forces, yet it has struggled considerably. 
 </p>
 
+![](data/202592_408322_DIS_LOGO_600x324_with-shadow.png)
+
 ## Business Understanding
 
 ### Business Problem
