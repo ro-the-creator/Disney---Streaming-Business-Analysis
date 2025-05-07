@@ -3,7 +3,7 @@
  Streaming platforms rose to the top with their business model, attracting millions of concurrent subscribers. Netflix has been a dominating force in this sector of entertainment. However, many competing streaming platforms emerged, attempted to carve a space in this profitable sector. Disney+ is one of these competing forces, yet it has struggled considerably. 
 </p>
 
-![](data/202592_408322_DIS_LOGO_600x324_with-shadow.png)
+![](README-files/disney-logo.png)
 
 ## Business Understanding
 
@@ -20,7 +20,7 @@ Marketing/Entertainment
 
 ### Data Lifecycle
 As a data analyst, I used each phase of the data life cycle to complete my work. This allowed me to stay focused on my task. For this task:
-![](data/datalifecycle.png)
+![](README-files/datalifecycle.png)
 - I am presented with the business problem.
    - Aside from data collection, I also viewed news resources and overviews of the companies I would focus on.
      
@@ -51,16 +51,23 @@ The data I worked with included:
    - Prime Video
    - Disney+
 
+<p align="center">
 The types of these different data categories were mainly consistent, with some exceptions. All of the data was qualitative. Even the data categories involving numeric ratings are considered qualitative, since they are used to show the characteristics of each show. Subsequently, while the show ratings and platform availability data entries were all in numeric form, show titles were the only non-numeric data entries. Finally, the show ratings are represented as continuous data, as they are indicative of a range of values that judge a show's value. Show titles, on the other hand, are discrete data entries, since they represent individual movies. Platform availability, however, falls into an interesting distinction. While the data entries themselves are continuous, since they are measuring whether or not a streaming service have a show available, this data was used in a discrete manner, by totaling the count of shows a platform has available.
+</p>
 
 ***
 ### Excel Analysis
 <p align="center">
-To begin working on the data in Excel, I had to adjust Excel parameters to detect the commas in the .csv file as cells. Once the .csv was transferred onto Excel, I was able to sort and filter the raw data to make it easier to work with. I filtered the blank entries and sorted the data in descending order based on the Rotten Tomatoes Scores column. Once this was done, I then used functions to calculate summary statistics. The data collected information on if a platform had a show by using 0 or 1. The data displayed 1 if it contained the show, and 0 if it did not. Therefore, I was able to use a COUNTIF function to count how many 1s appeared in the column for each streaming platform. This gave me a total count of shows that each platform had.
+To begin working on the data in Excel, I had to adjust Excel parameters to detect the commas in the .csv file as cells. Once the .csv was transferred onto Excel, I was able to sort and filter the raw data to make it easier to work with. I filtered the blank entries and sorted the data in descending order based on the Rotten Tomatoes Scores column. Once this was done, I then used functions to calculate summary statistics. The data collected information on if a streaming service had a show by using 0 or 1. The data displayed 1 if it contained the show, and 0 if it did not. Therefore, I was able to use a COUNTIF function to count how many 1s appeared in the column for each streaming platform. This gave me a total count of shows that each platform had.
 </p>
 <p align="center">
-Next, I wanted to find the top-rated show for each platform. To do this, I had to use a MATCH function within an INDEX function to find where the 1 appeared first in the sorted column, then display the title of the show that correlated with the matching cell. Doing this for all platforms while maintaining an absolute cell reference for the range of the show titles column.
+Next, I wanted to find the top-rated show for each streaming service. To do this, I had to use a MATCH function within an INDEX function to find where the 1 appeared first in the sorted column, then display the title of the show that correlated with the matching cell. I did this for all streaming services while maintaining an absolute cell reference for the range of the show titles column.
 </p>
+<p align="center">
+Finally, using the COUNTIF function results, I made a 3D bar graph to better visualize the differences in platform availability for each streaming service.
+</p>
+
+![](README-files/tv_shows-chart-graph.png)
 
 *** 
 
