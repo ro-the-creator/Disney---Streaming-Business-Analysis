@@ -80,5 +80,7 @@ Summarize the tasks performed in Python.
 ## Conclusion:
 Add three points about what you learned in this module.
 
+Next Steps:
+
 > [!NOTE]
 >  This is a fictitious scenario created by the github author for academic purposes only.
