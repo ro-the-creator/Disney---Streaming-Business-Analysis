@@ -25,7 +25,7 @@ As a data analyst, I used each phase of the data life cycle to complete my work.
    - Aside from data collection, I also viewed news resources and overviews of the companies I would focus on.
      
 - I collect the data (Dataset found on [Kaggle](https://www.kaggle.com/datasets/ruchi798/tv-shows-on-netflix-prime-video-hulu-and-disney)).
-   - In this scenario, the data collected included categories like movie/show titles, ratings, and if the platforms held the media.
+   - In this scenario, the data collected included categories like show titles, ratings, and whether the platforms held the media.
      
 - I process the data.
    - With this dataset, I sorted/filtered specific columns and removed blank spaces. I also use functions to pull key metrics.
@@ -40,6 +40,19 @@ As a data analyst, I used each phase of the data life cycle to complete my work.
 
 ### Data Types
 Explain the data types in the dataset (e.g., numeric/non-numeric, quantitative/qualitative, discrete/continuous).
+
+The data I worked with included:
+- show title
+- IMDb Ratings
+- Rotten Tomatoes Ratings
+- Whether or not a platform had the show available, or platform availability, for:
+   - Netflix
+   - Hulu
+   - Prime Video
+   - Disney+
+
+The types of these different data categories were mainly consistent, with some exceptions. All of the data was qualitative. Even the data categories involving numeric ratings are considered qualitative, since they are used to show the characteristics of each show. Subsequently, while the show ratings and platform availability data entries were all in numeric form, show titles were the only non-numeric data entries. Finally, the show ratings are represented as continuous data, as they are indicative of a range of values that judge a show's value. Show titles, on the other hand, are discrete data entries, since they represent individual movies. Platform availability, however, falls into an interesting distinction. While the data entries themselves are continuous, since they are measuring whether or not a streaming service have a show available, this data was used in a discrete manner, by totaling the count of shows a platform has available.
+
 ***
 ### Excel Analysis
 <p align="center">
