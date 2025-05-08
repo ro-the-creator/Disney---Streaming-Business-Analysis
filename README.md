@@ -139,11 +139,29 @@ This was done for all four streaming platforms, returning the filtered list to t
 </p>
 
 ## Conclusion:
-Add three points about what you learned in this module.
+
+Working with this data vastly improved my Python and presentation skills. 
+Within Python, I was able to:
+- Learn the CSV and Pandas Modules
+- Use "for" and "with" statements properly
+- Properly use loops in the manner of my choosing to work with large datasets
+- Be able to explain the processes behind my lines of code
+
+Within Excel, I was able to:
+- Learn powerful functions, like INDEX and MATCH
+- Use functions within functions to my benefit
+- Present my findings using powerful visuals
+
+Within Git/GitHub, I was able to:
+- Get comfortable with the order of git add, commit, and push
+- Proper file organization
+- Comfortable use of the terminal when working inside repositories
 
 ### Next Steps
 
-
+<p align="center">
+Based on my findings, we can see that Disney+ has far fewer shows available on their streaming service than its competitors. While this alone is not a sole indication of Disney+'s shortcomings, I believe this to be a large issue that needs to be addressed to attract more concurrent subscribers to the platform.
+</p>
 
 > [!NOTE]
->  This is a fictitious scenario created by the github author for academic purposes only.
+>  This is a fictitious scenario created by the GitHub author for academic purposes only.
