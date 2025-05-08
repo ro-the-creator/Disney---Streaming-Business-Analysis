@@ -75,12 +75,75 @@ Finally, using the COUNTIF function results, I made a 3D bar graph to better vis
 *** 
 
 ### Python Analysis
-Summarize the tasks performed in Python.
+
+<p align="center">
+In the Python section, I was able to work with the data using both the CSV and Pandas modules. I imported the modules, then I used a "with" statement to handle the .csv file properly.
+</p>
+
+```c++
+with open('/Users/Marcy_Student/Desktop/m0-Final_Project/data/tv_shows.csv', 'r', encoding='utf-8') as file:
+    reader = csv.reader(file,delimiter=',') 
+    header = next(reader)
+```
+
+With the variables prepared, I was able to list the column names by printing the Header variable, and then used a "for" loop to sift through the rows in the list and print the first five rows. This was done by using an `Enumerate()` function to add a counter to each item in a list. Then, I simply used an inequality, i < 5, in order to limit the print to the first 5 rows.
+```c++
+for i, row in enumerate(reader):
+        if i < 5:
+            print('First 5 Rows:', row)
+```
+<p align="center">
+Something to note: Since this was all done using the CSV module, these lines had to be done within the structure of the original "with" statement. This is to have all the functions work before the file is closed automatically at the end of the "with" statement.
+</p>
+
+***
+
+Next, I used another "for" loop to the print the type of each column in the .csv by using `Type()` with each item in the header.
+```c++
+# Header Type
+for item in header[0:-1]:
+    print('Header Type', type(item))
+```
+
+<p align="center">
+To begin sorting and filtering the data into digestible insights, I then used the Pandas module. After assigning a function to read the .csv to a variable, I used more inequalities to sort specific columns within the .csv. Using a 'greater than or equal to' sign to 1 for each streaming service column, I received booleans for each column, to see which streaming services contained the show. Then, I used a sum function to count up all the booleans, giving me the show availability of each streaming service.
+</p>
+
+```c++
+# Show Availability Count of all Streaming Platforms
+df = pd.read_csv('/Users/Marcy_Student/Desktop/m0-Final_Project/data/tv_shows.csv')
+
+N_count = df['Netflix'] >= 1
+H_count = df['Hulu'] >= 1
+PV_count = df['Prime Video'] >= 1
+D_count = df['Disney+'] >= 1
+
+print('Netflix Show Availability:', N_count.sum())
+print('Hulu Show Availability:',H_count.sum())
+print('Prime Video Show Availability:', PV_count.sum())
+print('Disney+ Show Availability:', D_count.sum())
+```
+
+<p align="center">
+Finally, I applied the filter list back to the original data, so that I can only see the rows that contain 1 on the respective streaming service columns. An example is shown below:
+</p>
+
+```c++
+# Filtered List of Netflix Show Availability Count
+N_filter = df['Netflix'] >= 1
+df_N_filter = df[N_filter]
+print(df_N_filter)
+```
+<p align="center">
+This was done for all four streaming platforms, returning the filtered list to the data.
+</p>
 
 ## Conclusion:
 Add three points about what you learned in this module.
 
-Next Steps:
+### Next Steps
+
+
 
 > [!NOTE]
 >  This is a fictitious scenario created by the github author for academic purposes only.
