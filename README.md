@@ -24,7 +24,7 @@ As a data analyst, I used each phase of the data life cycle to complete my work.
 - I am presented with the business problem.
    - Aside from data collection, I also viewed news resources and overviews of the companies I would focus on.
      
-- I collect the data (Dataset found on [Kaggle](https://www.kaggle.com/datasets/ruchi798/tv-shows-on-netflix-prime-video-hulu-and-disney)).
+- I collect the data (Datasets  found on Kaggle | [Shows](https://www.kaggle.com/datasets/ruchi798/tv-shows-on-netflix-prime-video-hulu-and-disney), [Disney Stock](https://www.kaggle.com/datasets/olegshpagin/walt-disney-company-stock-price-dataset), [Netflix Stock](https://www.kaggle.com/datasets/henryshan/netflix-stock-price)).
    - In this scenario, the data collected included categories like show titles, ratings, and whether the platforms held the media.
      
 - I process the data.
