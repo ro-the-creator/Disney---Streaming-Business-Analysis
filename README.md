@@ -189,10 +189,57 @@ Here, I created a variable that would contain a condition inequality that I crea
 ***
 
  <p align="center">
-Lastly, I wanted to use Matplotlib.pyplot in order to create key visuals using Python. While I was still able to create useful visuals on Excel, Python allowed me to get more concise with my graphs by having to option to adjust every single parameter of the graphs.
+Lastly, I wanted to use Matplotlib.pyplot in order to create key visuals using Python. While I was still able to create useful visuals on Excel, Python allowed me to get more concise with my graphs by having to option to adjust every single parameter of the graphs. Since I was dealing with the stock prices of Disney and Netflix, I wanted to use line graph to tell their stories.
  </p>
 
- 
+ <p align="center">
+Since the stock data was extensive, I wanted to filter the stock prices to a specific range of dates. To do this, I used the following codeblock:
+</p>
+
+```c++
+# Creating a filtered_df between Nov 12, 2019 - Nov 12, 2022
+
+filtered_nov_df = pd.Series({
+    'Date': pd.date_range(start='2019-01-02', end='2022-12-31')
+    })
+
+filtered_df = df.loc[df['Date'] > '2019-01-12']
+
+print(filtered_df)
+```
+Here, I created variables that would allow me to work with a specific, filtered dataset. Using `pd.date_range()` I was able to create a sequence of dates from the 'Date' column, which allowed me to narrow the data down using start and end arguments.
+
+ <p align="center">
+Once this was done, I was able to use Matplotlib.pyplot to create the following visuals with these codeblocks:
+ </p>
+
+ ```c++
+# Disney
+markers = [424]
+plt.plot(filtered_df["datetime"], filtered_df['close'], markevery=markers, marker='D', ms=10, mfc='r', label='Nov 12, 2019 | Launch of Disney+' )
+plt.xlabel("Date (Yr)")
+plt.ylabel("Closing Value ($)")
+plt.title("Disney Closing Stock Value Jan 2019 - Dec 2022")
+plt.grid(True)
+plt.xticks([506, 1012, 1528], ['2020', '2021', '2022'])
+plt.axhline(y=118, color='g', ls='--', label='Mean Stock Price | $118')
+plt.legend()
+plt.show()
+```
+```c++
+# Netflix
+markers = [210]
+plt.plot(filtered_df["Date"], filtered_df['Close'], 'r-', markevery=markers, marker='D', ms=10, mfc='b', label='Nov 12, 2019 | Launch of Disney+')
+plt.xlabel("Date (Yr)")
+plt.ylabel("Closing Value ($)")
+plt.title("Netflix Closing Stock Value Jan 2019 - Dec 2022")
+plt.grid(True)
+plt.xticks([244, 497, 749], ['2020', '2021', '2022'])
+plt.axhline(y=379, color='g', ls='--', label='Mean Stock Price | $379')
+plt.legend()
+plt.show()
+```
+
 
 ## Conclusion:
 
@@ -217,6 +264,33 @@ Within Git/GitHub, I was able to:
 
 <p align="center">
 Based on my findings, we can see that Disney+ has far fewer shows available on their streaming service than its competitors. While this alone is not a sole indication of Disney+'s shortcomings, I believe this to be a large issue that needs to be addressed to attract more concurrent subscribers to the platform.
+</p>
+
+<p align="center">
+Coinciding with this issue, we see that Disney+ is not hosting many shows with high ratings, specifically Rotten Tomatoes ratings above 90. Disney hosts a measly number of 3 shows rated about 90, while Netflix and the other platforms host at least 10 or more. While it may be speculative, I believe hosting high-rated shows are a strong motivation for customers to sign up for streaming platforms.
+</p>
+
+![](README-files/NFLX_DS_Graph.png)
+
+#### Disney:
+In the pyplot graphs, we see that Disney's closing stock price was sitting around $130 stock price before shooting up to high $140s - low $150s after it's release on November 12, 2025. 
+
+As seen on the graph, however, we can see that the stock price plummets not long after its debut. The main reason for this likely due to the global fear of COVID-19 during the time. Yet, between Mar 9, 2020 - Aug 31, 2020 Disney's stock price saw a 26.17% increase. These dates are a rough estimate of the COVID-19 Lockdown duration. 
+
+This is most likely due to a rise in streaming services being used as people were stuck at home during the pandemic. Although difficult to tell just by looking at Disney's stock price alone, the stock increase is significant for a company undergoing the unstable turmoil of the COVID pandemic in the U.S.
+
+Going into 2021, we can see Disney enjoys a high stock price with the amounting concurrent Disney+ subscribers. Furthermore, Disney presumably benefits from the easing of lockdown restrictions with the reopening of Disney parks, one of Disney's most significant source of income. 
+
+By 2022, however, we begin to see Disney's stock price fall. While other streaming companies took a hit during this time due to competition, this is where I believe the consequences of Disney+'s lack of shows prevents Disney from competing with other streaming platforms that host significantly more shows.
+
+#### Netflix:
+In comparison, Netflix's stock price seemingly follows a similar path. However, key differences become more apparent when we take a closer look.
+
+With the 2020 COVID pandemic, Netflix did not take as harsh of a stock price hit as Disney did. Furthermore, Netflix was also able to bounce back harder, with a 52.89% stock price increase during the same timeframe, Mar 9, 2020 - Aug 31, 2020. This is double the percentage increase that Disney+ was able to achieve.
+
+#### Final Thoughts:
+<p align="center">
+Overall, these conjoined insights all seem to indicate that if Disney wants their streaming platform to succeed, there must be a greater emphasis on the content they are providing for its subscribers. I believe that if more shows were hosted, especially high-rated shows, it would satisfy current subscribers and attract more customers.
 </p>
 
 > [!NOTE]
