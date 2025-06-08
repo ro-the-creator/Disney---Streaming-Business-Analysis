@@ -50,9 +50,10 @@ The data I worked with included:
    - Hulu
    - Prime Video
    - Disney+
+- Stock Price Data
 
 <p align="center">
-The types of these different data categories were mainly consistent, with some exceptions. All of the data was qualitative. Even the data categories involving numeric ratings are considered qualitative, since they are used to show the characteristics of each show. Subsequently, while the show ratings and platform availability data entries were all in numeric form, show titles were the only non-numeric data entries. Finally, the show ratings are represented as continuous data, as they are indicative of a range of values that judge a show's value. Show titles, on the other hand, are discrete data entries, since they represent individual movies. 
+The types of these different data categories were mainly consistent, with some exceptions. Most of the data was qualitative, aside from the stock prices of Netflix and Disney+ being quantitative data. Even the data categories involving numeric ratings are considered qualitative, since they are used to show the characteristics of each show. Subsequently, while the show ratings and platform availability data entries were all in numeric form, show titles were the only non-numeric data entries. Finally, the show ratings are represented as continuous data, as they are indicative of a range of values that judge a show's value. Show titles, on the other hand, are discrete data entries, since they represent individual movies. 
 </p>
  <p align="center">
  Platform availability, however, falls into an interesting distinction. While the data entries themselves are continuous, since they are measuring whether or not a streaming service have a show available, this data was used in a discrete manner, by totaling the count of shows a platform has available.
@@ -150,12 +151,48 @@ df['Rotten Tomatoes'] = df['Rotten Tomatoes'].astype(int)
 ```
 
 <p align="center">
-In this code block, I did two actions that would edit the entire column of Rotten Tomatoes and change them into integers. In the first line, I removed the "/100" from each row of the 'Rotten Tomatoes' column by using .str.replace. A notable keyword argument is "regex=False", which treats the "/100" as regular text rather than anything else.
-</p>
+In this code block, I did two actions that would edit the entire column of Rotten Tomatoes and change them into integers.
+ </p>
+ 
+ In the first line, I removed the "/100" from each row of the 'Rotten Tomatoes' column by using `.str.replace` and replacing it with an empty space, removing it from all rows in the column. A notable keyword argument is "regex=False", which treats the "/100" as regular text.
 
 <p align="center">
-The next line simply took the transformed Rotten Tomatoes column and changed them all into integers, allowing me to use certain actions and functions that I couldn't do with strings. To confirm the action was done properly, I used `df.dtypes` to check the types of all columns.
-</p>
+The next line simply took the transformed Rotten Tomatoes column and changed them all into integers, allowing me to use certain actions and functions that I couldn't do with strings.
+ </p>
+ 
+ To confirm the action was done properly, I used `df.dtypes` to check the types of all columns.
+
+ <p align="center">
+ Once I had transformed the data into integers I could work with, I began to use functions and inequalities to pull the insights I needed.
+ </p>
+
+ ```c++
+N_condition = df['Rotten Tomatoes'] >= 90
+N_result = df.loc[N_condition, 'Netflix']
+
+H_condition = df['Rotten Tomatoes'] >= 90
+H_result = df.loc[H_condition, 'Hulu']
+
+PV_condition = df['Rotten Tomatoes'] >= 90
+PV_result = df.loc[PV_condition, 'Prime Video']
+
+D_condition = df['Rotten Tomatoes'] >= 90
+D_result = df.loc[D_condition, 'Disney+']
+```
+
+ <p align="center">
+Here, I created a variable that would contain a condition inequality that I created. I wanted to find all the rows within Rotten Tomatoes that had a score of 90 or above.
+ </p>
+
+ Then, I used `df.loc[]` to correspond those rows with the streaming platform columns. All that was left was to use `pd.value_counts()` for each result variable to find out how many shows with a rating 90 or more were on each streaming platform.
+
+***
+
+ <p align="center">
+Lastly, I wanted to use Matplotlib.pyplot in order to create key visuals using Python. While I was still able to create useful visuals on Excel, Python allowed me to get more concise with my graphs by having to option to adjust every single parameter of the graphs.
+ </p>
+
+ 
 
 ## Conclusion:
 
