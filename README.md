@@ -77,7 +77,7 @@ Finally, using the COUNTIF function results, I made a 3D bar graph to better vis
 ### Python Analysis
 
 <p align="center">
-In the Python section, I was able to work with the data using both the CSV and Pandas modules. I imported the modules, then I used a "with" statement to handle the .csv file properly.
+In the Python section, I was able to work with the data using the CSV, Pandas, and Matplotlib libraries. I imported the libraries, then I used a "with" statement to handle the .csv file properly.
 </p>
 
 ```c++
@@ -136,6 +136,25 @@ print(df_N_filter)
 ```
 <p align="center">
 This was done for all four streaming platforms, returning the filtered list to the data.
+</p>
+
+***
+
+<p align="center">
+Continuing with Pandas, I wanted to find a critical insight: the count of shows above a 90 Rotten Tomatoes rating for each streaming platform. In order to do this, some transformation to the data must be done.
+</p>
+
+```c++
+df['Rotten Tomatoes'] = df['Rotten Tomatoes'].str.replace('/100', '', regex=False)
+df['Rotten Tomatoes'] = df['Rotten Tomatoes'].astype(int)
+```
+
+<p align="center">
+In this code block, I did two actions that would edit the entire column of Rotten Tomatoes and change them into integers. In the first line, I removed the "/100" from each row of the 'Rotten Tomatoes' column by using .str.replace. A notable keyword argument is "regex=False", which treats the "/100" as regular text rather than anything else.
+</p>
+
+<p align="center">
+The next line simply took the transformed Rotten Tomatoes column and changed them all into integers, allowing me to use certain actions and functions that I couldn't do with strings. To confirm the action was done properly, I used `df.dtypes` to check the types of all columns.
 </p>
 
 ## Conclusion:
