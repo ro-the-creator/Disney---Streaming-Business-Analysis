@@ -189,7 +189,7 @@ Here, I created a variable that would contain a condition inequality that I crea
 ***
 
  <p align="center">
-Lastly, I wanted to use Matplotlib.pyplot in order to create key visuals using Python. While I was still able to create useful visuals on Excel, Python allowed me to get more concise with my graphs by having to option to adjust every single parameter of the graphs. Since I was dealing with the stock prices of Disney and Netflix, I wanted to use line graph to tell their stories.
+Lastly, I wanted to use Matplotlib.pyplot in order to create key visuals using Python. While I was still able to create useful visuals on Excel, Python allowed me to get more concise with my graphs by having the option to adjust every single parameter of the graphs. Since I was dealing with the stock prices of Disney and Netflix, I wanted to use line graph to tell their stories.
  </p>
 
  <p align="center">
