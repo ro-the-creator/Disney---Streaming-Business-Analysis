@@ -270,7 +270,7 @@ Based on my findings, we can see that Disney+ has far fewer shows available on t
 Coinciding with this issue, we see that Disney+ is not hosting many shows with high ratings, specifically Rotten Tomatoes ratings above 90. Disney hosts a measly number of 3 shows rated about 90, while Netflix and the other platforms host at least 10 or more. While it may be speculative, I believe hosting high-rated shows are a strong motivation for customers to sign up for streaming platforms.
 </p>
 
-![](README-files/NFLX_DS_Graph.png)
+![](README-files/DS_NTFLX_Graphs.png)
 
 #### Disney:
 In the pyplot graphs, we see that Disney's closing stock price was sitting around $130 stock price before shooting up to high $140s - low $150s after it's release on November 12, 2025. 
