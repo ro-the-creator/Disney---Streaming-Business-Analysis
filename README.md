@@ -142,7 +142,7 @@ This was done for all four streaming platforms, returning the filtered list to t
 ***
 
 <p align="center">
-Continuing with Pandas, I wanted to find a critical insight: the count of shows above a 90 Rotten Tomatoes rating for each streaming platform. In order to do this, some transformation to the data must be done.
+Continuing with Pandas, I wanted to find a critical insight: the number of shows with a 90% Rotten Tomatoes rating for each streaming platform. To do this, I had to transform the data.
 </p>
 
 ```c++
@@ -189,11 +189,11 @@ Here, I created a variable that would contain a condition inequality that I crea
 ***
 
  <p align="center">
-Lastly, I wanted to use Matplotlib.pyplot in order to create key visuals using Python. While I was still able to create useful visuals on Excel, Python allowed me to get more concise with my graphs by having the option to adjust every single parameter of the graphs. Since I was dealing with the stock prices of Disney and Netflix, I wanted to use line graph to tell their stories.
+Lastly, I wanted to use Matplotlib.pyplot in order to create key visuals using Python. While I was still able to create useful visuals on Excel, Python allowed me to get more concise with my graphs by having the option to adjust every single parameter of the graphs. Since I was dealing with the stock prices of Disney and Netflix, I wanted to use line graphs to tell their stories.
  </p>
 
  <p align="center">
-Since the stock data was extensive, I wanted to filter the stock prices to a specific range of dates. To do this, I used the following codeblock:
+The stock data was extensive, so I aimed to filter the stock prices to a specific range of dates. To do this, I used the following codeblock:
 </p>
 
 ```c++
@@ -207,7 +207,7 @@ filtered_df = df.loc[df['Date'] > '2019-01-12']
 
 print(filtered_df)
 ```
-Here, I created variables that would allow me to work with a specific, filtered dataset. Using `pd.date_range()` I was able to create a sequence of dates from the 'Date' column, which allowed me to narrow the data down using start and end arguments.
+Here, I created variables that would allow me to work with a specific, filtered dataset. Using `pd.date_range()`, I was able to create a sequence of dates from the 'Date' column, which allowed me to narrow the data down using start and end arguments.
 
  <p align="center">
 Once this was done, I was able to use Matplotlib.pyplot to create the following visuals with these codeblocks:
@@ -275,13 +275,13 @@ Coinciding with this issue, we see that Disney+ is not hosting many shows with h
 #### Disney:
 In the pyplot graphs, we see that Disney's closing stock price was sitting around $130 stock price before shooting up to high $140s - low $150s after it's release on November 12, 2025. 
 
-As seen on the graph, however, we can see that the stock price plummets not long after its debut. The main reason for this likely due to the global fear of COVID-19 during the time. Yet, between Mar 9, 2020 - Aug 31, 2020 Disney's stock price saw a 26.17% increase. These dates are a rough estimate of the COVID-19 Lockdown duration. 
+As seen on the graph, however, we can see that the stock price plummets not long after its debut. The main reason for this is likely due to the global fear of COVID-19 at the time. Despite this, between March 9, 2020, and August 31, 2020, Disney's stock price saw a 26.17% increase. These dates are a rough estimate of the COVID-19 Lockdown duration. 
 
-This is most likely due to a rise in streaming services being used as people were stuck at home during the pandemic. Although difficult to tell just by looking at Disney's stock price alone, the stock increase is significant for a company undergoing the unstable turmoil of the COVID pandemic in the U.S.
+This is most likely due to a rise in streaming services being used as people were stuck at home during the pandemic. This stock price increase is significant for a company undergoing the unstable turmoil of the COVID pandemic in the U.S.
 
-Going into 2021, we can see Disney enjoys a high stock price with the amounting concurrent Disney+ subscribers. Furthermore, Disney presumably benefits from the easing of lockdown restrictions with the reopening of Disney parks, one of Disney's most significant source of income. 
+Going into 2021, we can see Disney enjoys a high stock price with the amounting concurrent Disney+ subscribers. Furthermore, Disney presumably benefits from the easing of lockdown restrictions with the reopening of Disney parks, one of Disney's most significant sources of income. 
 
-By 2022, however, we begin to see Disney's stock price fall. While other streaming companies took a hit during this time due to competition, this is where I believe the consequences of Disney+'s lack of shows prevents Disney from competing with other streaming platforms that host significantly more shows.
+By 2022, however, we began to see Disney's stock price fall. While other streaming companies took a hit during this time due to competition, this is where I believe the consequences of Disney+'s lack of shows prevents Disney from competing with other streaming platforms that host significantly more shows.
 
 #### Netflix:
 In comparison, Netflix's stock price seemingly follows a similar path. However, key differences become more apparent when we take a closer look.
